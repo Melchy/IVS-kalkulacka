@@ -2,6 +2,7 @@
 #ifndef OPERATIONS_H
 #define OPERATIONS_H
     #include "Qlabel.h"
+	#include <string.h>
 	using namespace std;
 	class Operations
 	{
@@ -14,8 +15,8 @@
 		void setOperation(string);
 		void setOperands(double,double);
 		double add();
-		double subtract();
-		double multipli();
+		double substract();
+		double multiply();
 		double divide();
 		double factorial();
 		double power2();
