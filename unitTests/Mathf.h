@@ -13,7 +13,4 @@
 		static double power(double,double);
 		static double sqrt(double);
 	};
-
-	std::string overflow = "Overflow";
-	std::string syntax = "Syntax Error";
 #endif
