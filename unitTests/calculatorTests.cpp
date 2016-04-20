@@ -31,7 +31,7 @@ TEST_CASE("Mathf") {
 		
 	}
 	SECTION("checkDivide"){
-		REQUIRE(Mathf::divide(3,5)==(3/5));
+		REQUIRE(Mathf::divide(3,5)==((double)3/(double)5));
 		REQUIRE(Mathf::divide(100,5)==20);
 		REQUIRE_THROWS(	Mathf::divide(100,0));
 	}
