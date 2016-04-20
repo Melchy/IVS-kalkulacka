@@ -2,30 +2,20 @@
 #ifndef OPERATIONS_H
 #define OPERATIONS_H
     #include "Qlabel.h"
-	#include <string.h>
 	using namespace std;
 	class Operations
 	{
 	public:
-		double getOperand1();
-		double getOperand2();
-		string getOperation();
-		void setOperand1(double);
-		void setOperand2(double);
+		void setOperand1(long);
+		void setOperand2(long);
 		void setOperation(string);
-		void setOperands(double,double);
-		double add();
-		double substract();
-		double multiply();
-		double divide();
-		double factorial();
-		double power2();
 		double calculate();
-		void show(double,Qlabel&);
 		void clear();
+		bool inOneOperandOperation(string);
 	private:
 		double operand1 = 0;
 		double operand2 = 0;
 		string operation="";
+		string oneOperandOperations[10] = {""};
 	};
 #endif
