@@ -176,5 +176,10 @@ void MainWindow::on_pushButton_10_clicked()
     vysledek = pom.left(length-1);
 
     ui->label->setText(vysledek);
+    if (ui->label->text() == "")
+    {
+        ui->label->setText("0");
+    }
+
 
 }
