@@ -1,14 +1,19 @@
 #ifndef MATHF_H
 #define MATHF_H
+
+#include<string>
 	class Mathf
 	{
 	public:
-		static long add(long,long);
-		static long subtract(long,long);
-		static long multipli(long,long);
-		static long divide(long,long);
-		static long factorial(long);
-		static long power(long,long);
-		static long sqrt(long);
+		static double add(double,double);
+		static double subtract(double,double);
+		static double multipli(double,double);
+		static double divide(double,double);
+		static double factorial(double);
+		static double power(double,double);
+		static double sqrt(double);
 	};
+
+	std::string overflow = "Overflow";
+	std::string syntax = "Syntax Error";
 #endif

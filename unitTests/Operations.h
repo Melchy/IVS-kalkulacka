@@ -1,4 +1,3 @@
-
 #ifndef OPERATIONS_H
 #define OPERATIONS_H
     #include "Qlabel.h"
@@ -6,8 +5,8 @@
 	class Operations
 	{
 	public:
-		void setOperand1(long);
-		void setOperand2(long);
+		void setOperand1(double);
+		void setOperand2(double);
 		void setOperation(string);
 		double calculate();
 		void clear();
@@ -16,6 +15,6 @@
 		double operand1 = 0;
 		double operand2 = 0;
 		string operation="";
-		string oneOperandOperations[10] = {""};
+		string oneOperandOperations[10] = {"!", "sqrt"};
 	};
 #endif

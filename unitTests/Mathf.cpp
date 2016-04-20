@@ -1,25 +1,56 @@
 #include "Mathf.h"
+#include <math.h>
 	
-long Mathf::add(long op1, long op2){
-	return 0;
+double Mathf::add(double op1, double op2){
+	if((op1 + op2) > 999999999)
+		throw overflow;
+	else
+		return op1 + op2;
 }
-long Mathf::subtract(long op1, long op2){
-	return 0;
+
+double Mathf::subtract(double op1, double op2){
+	if((op1-op2) < -99999999)
+		throw overflow;
+	else
+		return op1-op2;
 }
-long Mathf::multipli(long op1, long op2){
-	return 0;
+
+double Mathf::multipli(double op1, double op2){
+	if((op1*op2) > 999999999)
+		throw overflow;
+	else return op1*op2;
 }
-long Mathf::divide(long op1, long op2){
-	return 0;
+
+double Mathf::divide(double op1, double op2){
+	if((op2 == 0) || ((op1 / op2) > 999999999) || ((op1 / op2) < -99999999))
+		throw overflow;
+	else return op1 / op2;
 }
-long Mathf::factorial(long op1){
-	return 0;
+
+double Mathf::factorial(double op1){
+	if((op1 > 12) || (op1 < 0))
+		throw overflow;
+	else
+	{
+		long c = op1; //counter
+		long fact = 1; //factorial
+		for(long i = 0; i < c; i++)
+			fact *= i;
+		return fact;
+	}
 }
-long Mathf::power(long op1, long op2){
-	return 0;
+
+double Mathf::power(double op1, double op2){
+	double power = op1;
+	for(unsigned int i = 0; i < op2; i++)
+		power *= op1;
+	if(power > 999999999)
+		throw overflow;
+	else return power;
 }
-long Mathf::sqrt(long op1){
-	return 0;
+
+double Mathf::sqrt(double op1){
+	return sqrt(op1);
 }
 
 
