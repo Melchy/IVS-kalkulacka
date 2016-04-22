@@ -5,7 +5,7 @@
 */
 #ifndef OPERATIONS_H
 #define OPERATIONS_H
-    #include "Qlabel.h"
+#include "Qlabel.h"
 #include "Mathf.h"
 #include <stdbool.h>
 
