@@ -2,20 +2,24 @@
 #define OPERATIONS_H
     #include "Qlabel.h"
 #include "Mathf.h"
+#include <stdbool.h>
+
 	using namespace std;
 	class Operations
 	{
 	public:
+//		Operations();
 		void setOperand1(double);
 		void setOperand2(double);
 		void setOperation(string);
+		string getOperation();
 		double calculate();
 		void clear();
 		bool inOneOperandOperation(string);
 	private:
 		double operand1 = 0;
 		double operand2 = 0;
-		string operation="";
+		string operation= "";
 		string oneOperandOperations[10] = {"!", "sqrt"};
 	};
 #endif

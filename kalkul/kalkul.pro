@@ -15,10 +15,12 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     Operations.cpp \
-    Mathf.cpp
+    Mathf.cpp \
+    GUI.cpp
 
 HEADERS  += mainwindow.h \
     Mathf.h \
-    Operations.h
+    Operations.h \
+    GUI.h
 
 FORMS    += mainwindow.ui

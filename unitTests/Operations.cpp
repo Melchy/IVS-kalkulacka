@@ -1,6 +1,14 @@
-#include "Operations.h"
 #include "Mathf.h"
-
+#include "Operations.h"
+/*
+Operations::Operations()
+{
+	operand1 = 0;
+	operand2 = 0;
+	operation = "";
+	oneOperandOperations = {"!", "sqrt"};
+}
+*/
 void Operations::setOperand1(double Op1){
 	operand1 = Op1;
 }
@@ -9,6 +17,10 @@ void Operations::setOperand2(double Op2){
 }
 void Operations::setOperation(string Operation){
 	operation = Operation;
+}
+string  Operations::getOperation()
+{
+	return operation;
 }
 
 
