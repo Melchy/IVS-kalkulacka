@@ -28,7 +28,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-Button(int number)
+Button_num(int number)
 {
     if (ui->label->text()== "0" || ui->label->text()== "Overflow" || ui->label->text() == "syntax error")
     {
@@ -42,54 +42,68 @@ Button(int number)
     }
 }
 
+Button_op(int op)
+{
+    //TODO viac operácii za sebou
+    if(gui.clickOperand(ui->pushButton_op->text())) //true ak je čo rátať
+    {
+        Qstring vysledek = gui.clickEqual(); //vypočíta
+        ui->label->setText(vysledek);   //nastaví displej na hodnotu
+        gui.clickClear();   //vyčistí operandy a operátory
+        gui.clickNumber(vysledek);  //do 1 operandu nastaví výsledok
+    }
+    else
+        ui->label->setText(ui->pushButton_op->text());//vypíše operátor
+}
+
 void MainWindow::on_pushButton_1_clicked()
 {
-    Button(1);
+    Button_num(1);
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
- Button(2);
+ Button_num(2);
 }
 
 void MainWindow::on_pushButton_3_clicked()
 {
- Button(3);
+ Button_num(3);
 }
 
 void MainWindow::on_pushButton_4_clicked()
 {
- Button(4);
+ Button_num(4);
 }
 
 void MainWindow::on_pushButton_5_clicked()
 {
- Button(5);
+ Button_num(5);
 }
 
 void MainWindow::on_pushButton_6_clicked()
 {
- Button(6);
+ Button_num(6);
 }
 
 void MainWindow::on_pushButton_7_clicked()
 {
- Button(7);
+ Button_num(7);
 }
 
 void MainWindow::on_pushButton_8_clicked()
 {
- Button(8);
+ Button_num(8);
 }
 
 void MainWindow::on_pushButton_9_clicked()
 {
- Button(9);
+ Button_num(9);
 }
 
 void MainWindow::on_pushButton_0_clicked()
 {
- Button(0);
+ Button_num(0);
 }
 
 void MainWindow::on_pushButton_20_clicked() // "C"
@@ -135,95 +149,39 @@ void MainWindow::on_pushButton_13_clicked() // "!"
 
 void MainWindow::on_pushButton_14_clicked() // "sqrt"
 {
-    //TODO viac operácii za sebou
-    if(gui.clickOperand(ui->pushButton_14->text())) //true ak je čo rátať
-    {
-        Qstring vysledek = gui.clickEqual(); //vypočíta
-        ui->label->setText(vysledek);   //nastaví displej na hodnotu
-        gui.clickClear();   //vyčistí operandy a operátory
-        gui.clickNumber(vysledek);  //do 1 operandu nastaví výsledok
-    }
-    else
-        ui->label->setText(ui->pushButton_14->text());//vypíše operátor
-
+    Button_op(14);
 }
 
 
 void MainWindow::on_pushButton_15_clicked() // "**"
 {
-    if(gui.clickOperand(ui->pushButton_14->text())) //true ak je čo rátať
-    {
-        Qstring vysledek = gui.clickEqual(); //vypočíta
-        ui->label->setText(vysledek);   //nastaví displej na hodnotu
-        gui.clickClear();   //vyčistí operandy a operátory
-        gui.clickNumber(vysledek);  //do 1 operandu nastaví výsledok
-    }
-    else
-        ui->label->setText(ui->pushButton_14->text());//vypíše operátor
-
+    Button_op(15);
 }
 
 void MainWindow::on_pushButton_19_clicked() // "+"
 {
-    if(gui.clickOperand(ui->pushButton_14->text())) //true ak je čo rátať
-    {
-        Qstring vysledek = gui.clickEqual(); //vypočíta
-        ui->label->setText(vysledek);   //nastaví displej na hodnotu
-        gui.clickClear();   //vyčistí operandy a operátory
-        gui.clickNumber(vysledek);  //do 1 operandu nastaví výsledok
-    }
-    else
-        ui->label->setText(ui->pushButton_14->text());//vypíše operátor
+    Button_op(19);
 }
 
 void MainWindow::on_pushButton_18_clicked() // "-"
 {
-    if(gui.clickOperand(ui->pushButton_14->text())) //true ak je čo rátať
-    {
-        Qstring vysledek = gui.clickEqual(); //vypočíta
-        ui->label->setText(vysledek);   //nastaví displej na hodnotu
-        gui.clickClear();   //vyčistí operandy a operátory
-        gui.clickNumber(vysledek);  //do 1 operandu nastaví výsledok
-    }
-    else
-        ui->label->setText(ui->pushButton_14->text());//vypíše operátor
+    Button_op(19);
 }
 
 void MainWindow::on_pushButton_12_clicked() // "="
 {
-    if(gui.clickOperand(ui->pushButton_14->text())) //true ak je čo rátať
-    {
-        Qstring vysledek = gui.clickEqual(); //vypočíta
-        ui->label->setText(vysledek);   //nastaví displej na hodnotu
-        gui.clickClear();   //vyčistí operandy a operátory
-        gui.clickNumber(vysledek);  //do 1 operandu nastaví výsledok
-    }
-    else
-        ui->label->setText(ui->pushButton_14->text());//vypíše operátor
+    Qstring vysledek = gui.clickEqual();
+    ui->label->setText(vysledek);
+    gui.clickClear();
+    gui.ClickNumber(vysledek);
 }
 
 void MainWindow::on_pushButton_17_clicked() // "*"
 {
-    if(gui.clickOperand(ui->pushButton_14->text())) //true ak je čo rátať
-    {
-        Qstring vysledek = gui.clickEqual(); //vypočíta
-        ui->label->setText(vysledek);   //nastaví displej na hodnotu
-        gui.clickClear();   //vyčistí operandy a operátory
-        gui.clickNumber(vysledek);  //do 1 operandu nastaví výsledok
-    }
-    else
-        ui->label->setText(ui->pushButton_14->text());//vypíše operátor
+    Button_op(17);
 }
 
 void MainWindow::on_pushButton_16_clicked() // "/"
 {
-    if(gui.clickOperand(ui->pushButton_14->text())) //true ak je čo rátať
-    {
-        Qstring vysledek = gui.clickEqual(); //vypočíta
-        ui->label->setText(vysledek);   //nastaví displej na hodnotu
-        gui.clickClear();   //vyčistí operandy a operátory
-        gui.clickNumber(vysledek);  //do 1 operandu nastaví výsledok
-    }
-    else
-        ui->label->setText(ui->pushButton_14->text());//vypíše operátor
+    Button_op(16);
 }
