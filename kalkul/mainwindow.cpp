@@ -1,6 +1,20 @@
-<<<<<<< HEAD
+/**
+* @file mainwindow.cpp
+* @author skupina 3++
+* @brief  Implementace mainwindow.h.
+*/
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "Operations.h"
+#include "Mathf.h"
+#include <string>
+#include <stdlib.h>
+
+QString vysledek;
+QString pom;
+int maxLength=9;
+
+Operations object;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -16,8 +30,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_1_clicked()
 {
-    QString vysledek;
-    if (ui->label->text()== "0")
+    //QString vysledek;
+    pom=ui->label->text();
+    int delka=pom.length();
+    if(delka < maxLength)
+    {
+
+    if (ui->label->text()== "0" || ui->label->text()== "Overflow" )
     {
         ui->label->setText(ui->pushButton_1->text());
     }
@@ -26,13 +45,19 @@ void MainWindow::on_pushButton_1_clicked()
     vysledek = (ui->label->text() + ui->pushButton_1->text());
     ui->label->setText(vysledek);
     }
+    }
 }
 
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    QString vysledek;
-    if (ui->label->text()== "0")
+    //QString vysledek;
+    pom=ui->label->text();
+
+    int delka=pom.length();
+    if(delka < maxLength)
+    {
+    if (ui->label->text()== "0" || ui->label->text()== "Overflow" )
     {
         ui->label->setText(ui->pushButton_2->text());
     }
@@ -41,13 +66,19 @@ void MainWindow::on_pushButton_2_clicked()
     vysledek = (ui->label->text() + ui->pushButton_2->text());
     ui->label->setText(vysledek);
     }
+    }
 }
 
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    QString vysledek;
-    if (ui->label->text()== "0")
+    //QString vysledek;
+    pom=ui->label->text();
+
+    int delka=pom.length();
+    if(delka < maxLength)
+    {
+    if (ui->label->text()== "0" || ui->label->text()== "Overflow" )
     {
         ui->label->setText(ui->pushButton_3->text());
     }
@@ -56,13 +87,19 @@ void MainWindow::on_pushButton_3_clicked()
     vysledek = (ui->label->text() + ui->pushButton_3->text());
     ui->label->setText(vysledek);
     }
+    }
 }
 
 
 void MainWindow::on_pushButton_4_clicked()
 {
-    QString vysledek;
-    if (ui->label->text()== "0")
+    //QString vysledek;
+    pom=ui->label->text();
+
+    int delka=pom.length();
+    if(delka < maxLength)
+    {
+    if (ui->label->text()== "0" || ui->label->text()== "Overflow" )
     {
         ui->label->setText(ui->pushButton_4->text());
     }
@@ -71,13 +108,19 @@ void MainWindow::on_pushButton_4_clicked()
     vysledek = (ui->label->text() + ui->pushButton_4->text());
     ui->label->setText(vysledek);
     }
+    }
 }
 
 
 void MainWindow::on_pushButton_5_clicked()
 {
-    QString vysledek;
-    if (ui->label->text()== "0")
+    //QString vysledek;
+    pom=ui->label->text();
+
+    int delka=pom.length();
+    if(delka < maxLength)
+    {
+    if (ui->label->text()== "0" || ui->label->text()== "Overflow" )
     {
         ui->label->setText(ui->pushButton_5->text());
     }
@@ -86,13 +129,19 @@ void MainWindow::on_pushButton_5_clicked()
     vysledek = (ui->label->text() + ui->pushButton_5->text());
     ui->label->setText(vysledek);
     }
+    }
 }
 
 
 void MainWindow::on_pushButton_6_clicked()
 {
-    QString vysledek;
-    if (ui->label->text()== "0")
+    //QString vysledek;
+    pom=ui->label->text();
+
+    int delka=pom.length();
+    if(delka < maxLength)
+    {
+    if (ui->label->text()== "0" || ui->label->text()== "Overflow" )
     {
         ui->label->setText(ui->pushButton_6->text());
     }
@@ -101,12 +150,18 @@ void MainWindow::on_pushButton_6_clicked()
     vysledek = (ui->label->text() + ui->pushButton_6->text());
     ui->label->setText(vysledek);
     }
+    }
 }
 
 void MainWindow::on_pushButton_7_clicked()
 {
-    QString vysledek;
-    if (ui->label->text()== "0")
+    //QString vysledek;
+    pom=ui->label->text();
+
+    int delka=pom.length();
+    if(delka < maxLength)
+    {
+    if (ui->label->text()== "0" || ui->label->text()== "Overflow")
     {
         ui->label->setText(ui->pushButton_7->text());
     }
@@ -115,13 +170,19 @@ void MainWindow::on_pushButton_7_clicked()
     vysledek = (ui->label->text() + ui->pushButton_7->text());
     ui->label->setText(vysledek);
     }
+    }
 }
 
 
 void MainWindow::on_pushButton_8_clicked()
 {
-    QString vysledek;
-    if (ui->label->text()== "0")
+    //QString vysledek;
+    pom=ui->label->text();
+
+    int delka=pom.length();
+    if(delka < maxLength)
+    {
+    if (ui->label->text()== "0" || ui->label->text()== "Overflow")
     {
         ui->label->setText(ui->pushButton_8->text());
     }
@@ -130,13 +191,19 @@ void MainWindow::on_pushButton_8_clicked()
     vysledek = (ui->label->text() + ui->pushButton_8->text());
     ui->label->setText(vysledek);
     }
+    }
 }
 
 
 void MainWindow::on_pushButton_9_clicked()
 {
-    QString vysledek;
-    if (ui->label->text()== "0")
+    //QString vysledek;
+    pom=ui->label->text();
+
+    int delka=pom.length();
+    if(delka < maxLength)
+    {
+    if (ui->label->text()== "0" || ui->label->text()== "Overflow")
     {
         ui->label->setText(ui->pushButton_9->text());
     }
@@ -145,34 +212,47 @@ void MainWindow::on_pushButton_9_clicked()
     vysledek = (ui->label->text() + ui->pushButton_9->text());
     ui->label->setText(vysledek);
     }
+    }
 }
 
 
 void MainWindow::on_pushButton_0_clicked()
 {
-    QString vysledek;
+   // QString vysledek;
+    pom=ui->label->text();
+
+    int delka=pom.length();
+    if(delka < maxLength)
+    {
     if (ui->label->text()== "0");
+    else if (ui->label->text()== "Overflow")
+    {
+        ui->label->setText("0");
+    }
     else
     {
     vysledek = (ui->label->text() + ui->pushButton_0->text());
     ui->label->setText(vysledek);
+    }
     }
 }
 
 
 void MainWindow::on_pushButton_20_clicked()
 {
-    QString vysledek;
+    //QString vysledek;
     vysledek = "0";
     ui->label->setText(vysledek);
+    object.clear();
 }
 
 void MainWindow::on_pushButton_10_clicked()
 {
-    QString vysledek;
+    //QString vysledek;
     QString pom;
 
     pom = ui->label->text();
+    if (pom != "Overflow"){
     int length = pom.length();
     vysledek = pom.left(length-1);
 
@@ -181,188 +261,112 @@ void MainWindow::on_pushButton_10_clicked()
     {
         ui->label->setText("0");
     }
-
-
-}
-=======
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
-
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
-{
-    ui->setupUi(this);
-}
-
-MainWindow::~MainWindow()
-{
-    delete ui;
-}
-
-void MainWindow::on_pushButton_1_clicked()
-{
-    QString vysledek;
-    if (ui->label->text()== "0")
-    {
-        ui->label->setText(ui->pushButton_1->text());
     }
-    else
+    else {ui->label->setText("0");}
+}
+
+void MainWindow::on_pushButton_13_clicked()
+{
+    pom=ui->label->text();
+   double x = pom.toDouble();
+    if(x < 13)
     {
-    vysledek = (ui->label->text() + ui->pushButton_1->text());
-    ui->label->setText(vysledek);
+        object.setOperand1(x);
+        object.setOperation("!");
+
+       /* try {
+            object.calculate();
+            } catch(string &a){
+            QString tex = QString::fromStdString(a);
+            ui->label->text(tex);
+            object.clear();
+            return;
+            }
+*/
+        double y = object.calculate();
+        vysledek = QString::number(y);
+        ui->label->setText(vysledek);
+        object.clear();
     }
+    else  ui->label->setText("Overflow");
 }
 
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_pushButton_14_clicked()
 {
-    QString vysledek;
-    if (ui->label->text()== "0")
+    pom=ui->label->text();
+    double x = pom.toDouble();
+    if(x >= 1)
     {
-        ui->label->setText(ui->pushButton_2->text());
+        object.setOperand1(x);
+        object.setOperation("sqrt");
+        double y = object.calculate();
+        vysledek = QString::number(y);
+        ui->label->setText(vysledek);
+        object.clear();
     }
-    else
-    {
-    vysledek = (ui->label->text() + ui->pushButton_2->text());
-    ui->label->setText(vysledek);
-    }
+    else  ui->label->setText("Overflow");
+
 }
 
 
-void MainWindow::on_pushButton_3_clicked()
+void MainWindow::on_pushButton_15_clicked()
 {
-    QString vysledek;
-    if (ui->label->text()== "0")
-    {
-        ui->label->setText(ui->pushButton_3->text());
-    }
-    else
-    {
-    vysledek = (ui->label->text() + ui->pushButton_3->text());
-    ui->label->setText(vysledek);
-    }
+    pom=ui->label->text();
+    double x = pom.toDouble();
+    object.setOperand1(x);
+    object.setOperation("**");
+    ui->label->setText("**");
+
 }
 
-
-void MainWindow::on_pushButton_4_clicked()
+void MainWindow::on_pushButton_19_clicked()
 {
-    QString vysledek;
-    if (ui->label->text()== "0")
-    {
-        ui->label->setText(ui->pushButton_4->text());
-    }
-    else
-    {
-    vysledek = (ui->label->text() + ui->pushButton_4->text());
-    ui->label->setText(vysledek);
-    }
+    pom=ui->label->text();
+    double x = pom.toDouble();
+    object.setOperand1(x);
+    object.setOperation("+");
+    ui->label->setText("+ ");
 }
 
-
-void MainWindow::on_pushButton_5_clicked()
+void MainWindow::on_pushButton_18_clicked()
 {
-    QString vysledek;
-    if (ui->label->text()== "0")
-    {
-        ui->label->setText(ui->pushButton_5->text());
-    }
-    else
-    {
-    vysledek = (ui->label->text() + ui->pushButton_5->text());
-    ui->label->setText(vysledek);
-    }
+    pom=ui->label->text();
+    double x = pom.toDouble();
+    object.setOperand1(x);
+    object.setOperation("-");
+    ui->label->setText("- ");
 }
 
-
-void MainWindow::on_pushButton_6_clicked()
+void MainWindow::on_pushButton_12_clicked()
 {
-    QString vysledek;
-    if (ui->label->text()== "0")
-    {
-        ui->label->setText(ui->pushButton_6->text());
-    }
-    else
-    {
-    vysledek = (ui->label->text() + ui->pushButton_6->text());
-    ui->label->setText(vysledek);
-    }
-}
-
-void MainWindow::on_pushButton_7_clicked()
-{
-    QString vysledek;
-    if (ui->label->text()== "0")
-    {
-        ui->label->setText(ui->pushButton_7->text());
-    }
-    else
-    {
-    vysledek = (ui->label->text() + ui->pushButton_7->text());
-    ui->label->setText(vysledek);
-    }
-}
-
-
-void MainWindow::on_pushButton_8_clicked()
-{
-    QString vysledek;
-    if (ui->label->text()== "0")
-    {
-        ui->label->setText(ui->pushButton_8->text());
-    }
-    else
-    {
-    vysledek = (ui->label->text() + ui->pushButton_8->text());
-    ui->label->setText(vysledek);
-    }
-}
-
-
-void MainWindow::on_pushButton_9_clicked()
-{
-    QString vysledek;
-    if (ui->label->text()== "0")
-    {
-        ui->label->setText(ui->pushButton_9->text());
-    }
-    else
-    {
-    vysledek = (ui->label->text() + ui->pushButton_9->text());
-    ui->label->setText(vysledek);
-    }
-}
-
-
-void MainWindow::on_pushButton_0_clicked()
-{
-    QString vysledek;
-    if (ui->label->text()== "0");
-    else
-    {
-    vysledek = (ui->label->text() + ui->pushButton_0->text());
-    ui->label->setText(vysledek);
-    }
-}
-
-
-void MainWindow::on_pushButton_20_clicked()
-{
-    QString vysledek;
-    vysledek = "0";
-    ui->label->setText(vysledek);
-}
-
-void MainWindow::on_pushButton_10_clicked()
-{
-    QString vysledek;
-    QString pom;
-
-    pom = ui->label->text();
+    pom=ui->label->text();
     int length = pom.length();
-    vysledek = pom.left(length-1);
+    QString cislo = pom.right(length-2);
+    double z = cislo.toDouble();
+    object.setOperand2(z);
 
+    double y = object.calculate();
+    vysledek = QString::number(y);
     ui->label->setText(vysledek);
+    object.clear();
 
 }
->>>>>>> 4f43a49dd0f05d0750ad1a7bb444df810f6fa7c7
+
+void MainWindow::on_pushButton_17_clicked()
+{
+    pom=ui->label->text();
+    double x = pom.toDouble();
+    object.setOperand1(x);
+    object.setOperation("*");
+    ui->label->setText("* ");
+}
+
+void MainWindow::on_pushButton_16_clicked()
+{
+    pom=ui->label->text();
+    double x = pom.toDouble();
+    object.setOperand1(x);
+    object.setOperation("/");
+    ui->label->setText("/ ");
+}
