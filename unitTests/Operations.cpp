@@ -1,4 +1,5 @@
 #include "Operations.h"
+#include "Mathf.h"
 
 void Operations::setOperand1(double Op1){
 	operand1 = Op1;
@@ -9,25 +10,30 @@ void Operations::setOperand2(double Op2){
 void Operations::setOperation(string Operation){
 	operation = Operation;
 }
+
+
 double Operations::calculate() {
-	if(getOperation() == "*"){
-		return multipli();
+    if(operation == "*"){
+        return Mathf::multipli(operand1,operand2);
 	}
-	else if(getOperation() == "/"){
-		return divide();
+    else if(operation == "/"){
+        return Mathf::divide(operand1,operand2);
 	}
-	else if(getOperation() == "!"){
-		return factorial();
+    else if(operation == "!"){
+        return Mathf::factorial(operand1);
 	}
-	else if(getOperation() == "**"){
-		return power();
+    else if(operation  == "**"){
+        return Mathf::power(operand1,operand2);
 	}
-	else if (getOperation() == "+"){
-		return add();
+    else if (operation  == "+"){
+        return Mathf::add(operand1,operand2);
 	}
-	else if (getOperation() == "-"){
-		return substract();
+    else if (operation == "-"){
+        return Mathf::subtract(operand1,operand2);
 	}
+    else if (operation == "sqrt"){
+        return Mathf::sqrt(operand1);
+    }
 	else
 	{
 		throw "syntax error";

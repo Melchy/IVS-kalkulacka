@@ -6,7 +6,7 @@
 	{
 	public:
 		static double add(double,double);
-		static double subtract(double,double);
+        static double subtract(double,double);
 		static double multipli(double,double);
 		static double divide(double,double);
 		static double factorial(double);

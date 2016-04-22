@@ -1,6 +1,6 @@
 #ifndef OPERATIONS_H
 #define OPERATIONS_H
-    #include "../unitTests/Qlabel.h"
+    #include "Qlabel.h"
 #include "Mathf.h"
 	using namespace std;
 	class Operations
