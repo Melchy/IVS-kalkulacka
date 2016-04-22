@@ -1,4 +1,5 @@
 #include "GUI.h"
+
 using namespace std;
 
 #define MAX_LENGHT 9
@@ -16,10 +17,11 @@ bool GUI::clickOperand(string Operation)
 
 void GUI::clickNumber(string number)
 {
+    size_t neco;
 	if(oper.getOperation() == "")
-		oper.setOperand1(stod(number));
+        oper.setOperand1(stod(number, neco));
 	else
-		oper.setOperand2(stod(number));
+        oper.setOperand2(stod(number));
 }
 
 void GUI::clickClear()
@@ -34,5 +36,5 @@ void GUI::clickBack()
 
 string GUI::clickEqual()
 {
-	return to_string(oper.calculate());
+    return to_string(oper.calculate());
 }
