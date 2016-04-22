@@ -7,7 +7,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QString>
 
 namespace Ui {
 class MainWindow;
@@ -61,4 +60,3 @@ private:
 };
 
 #endif // MAINWINDOW_H
-/*** Konec souboru mainwindow.h ***/
