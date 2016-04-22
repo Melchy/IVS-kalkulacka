@@ -9,13 +9,13 @@
 	{
 	public:
 //		Operations();
-		void setOperand1(double);
-		void setOperand2(double);
-		void setOperation(string);
-		string getOperation();
-		double calculate();
-		void clear();
-		bool inOneOperandOperation(string);
+		static void setOperand1(double);
+		static void setOperand2(double);
+		static void setOperation(string);
+		static vstring getOperation();
+		static double calculate();
+		static void clear();
+		static bool inOneOperandOperation(string);
 	private:
 		double operand1 = 0;
 		double operand2 = 0;
