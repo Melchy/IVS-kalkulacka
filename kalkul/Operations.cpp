@@ -1,3 +1,8 @@
+/**
+* @file Operations.cpp
+* @author skupina 3++
+* @brief  Implementace Operations.h.
+*/
 #include "Operations.h"
 #include "Mathf.h"
 
@@ -55,3 +60,4 @@ bool inOneOperandOperation(string operation){
 	else 
 		return false;
 }
+/*** Konec souboru Operations.cpp ***/

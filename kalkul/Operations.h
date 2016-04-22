@@ -1,3 +1,8 @@
+/**
+* @file Operations.h
+* @author skupina 3++
+* @brief  Knihovna pro operace s frameworkem Qt.
+*/
 #ifndef OPERATIONS_H
 #define OPERATIONS_H
     #include "Qlabel.h"
@@ -19,3 +24,5 @@
 		string oneOperandOperations[10] = {"!", "sqrt"};
 	};
 #endif
+/*** Konec souboru Operations.h ***/
+

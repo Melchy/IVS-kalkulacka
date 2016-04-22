@@ -370,3 +370,4 @@ void MainWindow::on_pushButton_16_clicked()
     object.setOperation("/");
     ui->label->setText("/ ");
 }
+/*** Konec souboru mainwindow.cpp ***/

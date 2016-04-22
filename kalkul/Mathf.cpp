@@ -1,3 +1,8 @@
+/**
+* @file Mathf.cpp
+* @author skupina 3++
+* @brief  Implementace Mathf.h.
+*/
 #include "Mathf.h"
 #include <math.h>
 	
@@ -54,5 +59,4 @@ double Mathf::sqrt(double op1){
 		throw "Overflow";
 	return ::sqrt(op1);
 }
-
-
+/*** Konec souboru Mathf.cpp ***/

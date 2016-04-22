@@ -60,3 +60,4 @@ private:
 };
 
 #endif // MAINWINDOW_H
+/*** Konec souboru mainwindow.h ***/
