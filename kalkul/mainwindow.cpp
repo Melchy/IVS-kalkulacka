@@ -28,7 +28,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-Button_num(int number)
+void Button_num(int number)
 {
     if (ui->label->text()== "0" || ui->label->text()== "Overflow" || ui->label->text() == "syntax error")
     {
@@ -42,7 +42,7 @@ Button_num(int number)
     }
 }
 
-Button_op(int op)
+void Button_op(int op)
 {
     //TODO viac operácii za sebou
     if(gui.clickOperand(ui->pushButton_op->text())) //true ak je čo rátať
