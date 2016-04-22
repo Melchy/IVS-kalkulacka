@@ -26,11 +26,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-<<<<<<< HEAD
-void Button_num(int number)
-=======
 void MainWindow::on_pushButton_1_clicked()
->>>>>>> c8d98de84fbe86c74b9c48fe7678c7faa9514607
 {
     if (ui->label->text()== "0" || ui->label->text()== "Overflow" || ui->label->text() == "syntax error")
     {
@@ -43,11 +39,7 @@ void MainWindow::on_pushButton_1_clicked()
         gui.clickNumber((ui->label->text()).toStdString());    }
 }
 
-<<<<<<< HEAD
-void Button_op(int op)
-=======
 void MainWindow::on_pushButton_2_clicked()
->>>>>>> c8d98de84fbe86c74b9c48fe7678c7faa9514607
 {
     if (ui->label->text()== "0" || ui->label->text()== "Overflow" || ui->label->text() == "syntax error")
     {
