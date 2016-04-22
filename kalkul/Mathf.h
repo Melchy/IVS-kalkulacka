@@ -1,3 +1,8 @@
+/**
+* @file Mathf.h
+* @author skupina 3++
+* @brief  Knihovna pro matematické operace.
+*/
 #ifndef MATHF_H
 #define MATHF_H
 
@@ -14,3 +19,4 @@
 		static double sqrt(double);
 	};
 #endif
+/*** Konec souboru Mathf.h ***/

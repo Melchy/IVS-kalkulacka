@@ -1,3 +1,8 @@
+/**
+* @file main.cpp
+* @author skupina 3++
+* @brief  Hlavny soubor.
+*/
 #include "mainwindow.h"
 #include "Operations.h"
 #include "Mathf.h"
@@ -13,3 +18,4 @@ int main(int argc, char *argv[])
 
     return a.exec();
 }
+/*** Konec souboru main.cpp ***/

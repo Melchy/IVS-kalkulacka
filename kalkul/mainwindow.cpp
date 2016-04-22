@@ -185,3 +185,4 @@ void MainWindow::on_pushButton_16_clicked() // "/"
 {
     Button_op(16);
 }
+/*** Konec souboru mainwindow.cpp ***/
