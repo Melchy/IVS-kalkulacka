@@ -66,7 +66,7 @@ void Operations::clear() {
 
 }
 
-bool inOneOperandOperation(string Operation){
+bool Operations::inOneOperandOperation(string Operation){
     if(Operation == "!")
 		return true;
     else if(Operation == "sqrt")
