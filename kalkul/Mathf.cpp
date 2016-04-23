@@ -4,7 +4,6 @@
 * @brief  Implementace Mathf.h.
 */
 #include "Mathf.h"
-#include <math.h>
 	
 double Mathf::add(double op1, double op2){
 	if((op1 + op2) > 999999999)

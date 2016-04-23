@@ -11,17 +11,17 @@ bool GUI::clickOperand(string Operation)
 		oper.setOperation(Operation);
 		return false;
 	}
-	else
-		return true;
+    else if(oper.inOneOperandOperation(Operation))
+        oper.setOperation(Operation);
+    return true;
 }
 
-void GUI::clickNumber(string number)
+void GUI::clickNumber(double number)
 {
-    size_t neco;
 	if(oper.getOperation() == "")
-        oper.setOperand1(stod(number, neco));
+        oper.setOperand1(number);
 	else
-        oper.setOperand2(stod(number));
+        oper.setOperand2(number);
 }
 
 void GUI::clickClear()
@@ -34,7 +34,10 @@ void GUI::clickBack()
 
 }
 
-string GUI::clickEqual()
+double GUI::clickEqual()
 {
-    return to_string(oper.calculate());
+    double vysledek  = oper.calculate();
+    oper.clear();
+    oper.setOperand1(vysledek);
+    return vysledek;
 }

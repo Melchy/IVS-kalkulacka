@@ -5,6 +5,7 @@
 */
 #include "Mathf.h"
 #include "Operations.h"
+
 /*
 Operations::Operations()
 {
@@ -15,10 +16,10 @@ Operations::Operations()
 }
 */
 void Operations::setOperand1(double Op1){
-	operand1 = Op1;
+    operand1 = operand1*10 + Op1;
 }
 void Operations::setOperand2(double Op2){
-	operand2 = Op2;
+    operand2 = operand2*10 + Op2;
 }
 void Operations::setOperation(string Operation){
 	operation = Operation;
@@ -64,12 +65,14 @@ void Operations::clear() {
 	operation = "";
 
 }
-bool inOneOperandOperation(string operation){
-	if(operation == "!")
+
+bool inOneOperandOperation(string Operation){
+    if(Operation == "!")
 		return true;
-	else if(operation == "sqrt")
+    else if(Operation == "sqrt")
 		return true;
 	else 
 		return false;
 }
+
 /*** Konec souboru Operations.cpp ***/

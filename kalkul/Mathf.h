@@ -5,7 +5,7 @@
 */
 #ifndef MATHF_H
 #define MATHF_H
-
+#include <math.h>
 #include<string>
 	class Mathf
 	{

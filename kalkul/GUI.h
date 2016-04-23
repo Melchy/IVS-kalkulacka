@@ -11,9 +11,9 @@
 	{
 	public:
         bool clickOperand(string);
-        void clickNumber(string);
+        void clickNumber(double);
 		void clickClear();
 		void clickBack();
-		string clickEqual();
+        double clickEqual();
 	};
 #endif
