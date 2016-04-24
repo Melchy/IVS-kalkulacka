@@ -1,3 +1,10 @@
+/*******************************************************************
+ * Název projektu: Kalkulačka
+ * Soubor: Mathf.h
+ * Datum: 24.4.2016
+ * Autor: skupina 3++
+ * Popis: Matematická knihovna
+ *******************************************************************/
 /**
 * @file Mathf.h
 * @author skupina 3++
