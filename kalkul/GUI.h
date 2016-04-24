@@ -10,7 +10,7 @@
 	class GUI
 	{
     private:
-        string display = "";
+        string display = "0";
 	public:
         double clickOperand(string);
         void clickNumber(string);
