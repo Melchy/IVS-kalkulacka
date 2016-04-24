@@ -20,12 +20,12 @@
         string getOperation();
         double calculate();
         void clear();
-        bool inOneOperandOperation(string);
+        bool inOneOperandOperation(string); //zbytočná funkcia
 	private:
 		double operand1 = 0;
 		double operand2 = 0;
 		string operation= "";
-		string oneOperandOperations[10] = {"!", "sqrt"};
+        string oneOperandOperations[10] = {"!", "sqrt"}; //zbytočný string
 	};
 #endif
 /*** Konec souboru Operations.h ***/

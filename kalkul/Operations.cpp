@@ -16,10 +16,10 @@ Operations::Operations()
 }
 */
 void Operations::setOperand1(double Op1){
-    operand1 = operand1*10 + Op1;
+    operand1 = Op1;
 }
 void Operations::setOperand2(double Op2){
-    operand2 = operand2*10 + Op2;
+    operand2 = Op2;
 }
 void Operations::setOperation(string Operation){
 	operation = Operation;
@@ -40,7 +40,7 @@ double Operations::calculate() {
     else if(operation == "!"){
         return Mathf::factorial(operand1);
 	}
-    else if(operation  == "**"){
+    else if(operation  == "^"){
         return Mathf::power(operand1,operand2);
 	}
     else if (operation  == "+"){
@@ -50,7 +50,7 @@ double Operations::calculate() {
         return Mathf::subtract(operand1,operand2);
 	}
     else if (operation == "sqrt"){
-        return Mathf::sqrt(operand1);
+        return operand1 * Mathf::sqrt(operand2);
     }
 	else
 	{

@@ -9,9 +9,11 @@
 	using namespace std;
 	class GUI
 	{
+    private:
+        string display = "";
 	public:
-        bool clickOperand(string);
-        void clickNumber(double);
+        double clickOperand(string);
+        void clickNumber(string);
 		void clickClear();
 		void clickBack();
         double clickEqual();
