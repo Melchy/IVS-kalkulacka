@@ -22,21 +22,44 @@ Operations::Operations()
 	oneOperandOperations = {"!", "sqrt"};
 }
 */
+
+/**
+ * Nastaví první operand
+ * @param Op1 double první operand
+ */
 void Operations::setOperand1(double Op1){
     operand1 = Op1;
 }
-void Operations::setOperand2(double Op2){
+
+/**
+ * Nastaví druhý operand
+ * @param Op2 double druhý operand
+ */
+void Operations::setOperand2(double Op2){//nastaví druhý operand
     operand2 = Op2;
 }
+
+/**
+ * Nastaví operaci
+ * @param Operation string operace
+ */
 void Operations::setOperation(string Operation){
 	operation = Operation;
 }
-string  Operations::getOperation()
+
+/**
+ * Vrátí operaci
+ * @return string operace
+ */
+string Operations::getOperation()
 {
 	return operation;
 }
 
-
+/**
+ * Předává operandy a operace matematické knihovně, která vrátí výsledek
+ * @return double vrátí výsledek vypočítaný pomocí matematické knihovny
+ */
 double Operations::calculate() {
 	double result = 0;
     if(operation == "*"){
@@ -70,6 +93,9 @@ double Operations::calculate() {
 	return result;
 }
 
+/**
+ * Vyčistí operandy a operace
+ */
 void Operations::clear() {
 	operand1 = 0;
 	operand2 = 0;
@@ -77,6 +103,11 @@ void Operations::clear() {
 
 }
 
+/**
+ * Vyhodnotí jestli je operace jednooperandová
+ * @param Operation string znak operace
+ * @return bool pokud je operace jedooperandová vrátí true jinak false
+ */
 bool Operations::inOneOperandOperation(string Operation){
     if(Operation == "!" || Operation == "sqrt" || Operation == "=")
 		return true;
