@@ -8,7 +8,7 @@
 #include "Operations.h"
 #include "Mathf.h"
 #include "GUI.h"
-
+#include <QtDebug>
 GUI gui;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -23,125 +23,199 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_1_clicked()
+void MainWindow::on_pushButton_1_clicked()//1
 {
-    ui->label->setText(ui->label->text() + (ui->pushButton_1->text()));
-    gui.clickNumber(ui->pushButton_1->text().toStdString());
+    QString displayValue = ui->label->text();
+    string a = gui.clickNumber("1",displayValue.toStdString());
+    ui->label->setText(QString::fromStdString(a));
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_pushButton_2_clicked()//2
 {
-    ui->label->setText(ui->label->text() + (ui->pushButton_2->text()));
-    gui.clickNumber(ui->pushButton_2->text().toStdString());
+    QString displayValue = ui->label->text();
+    string a = gui.clickNumber("2",displayValue.toStdString());
+    ui->label->setText(QString::fromStdString(a));
 }
 
-void MainWindow::on_pushButton_3_clicked()
+void MainWindow::on_pushButton_3_clicked()//3
 {
-    ui->label->setText(ui->label->text() + (ui->pushButton_3->text()));
-    gui.clickNumber(ui->pushButton_3->text().toStdString());
+    QString displayValue = ui->label->text();
+    string a = gui.clickNumber("3",displayValue.toStdString());
+    ui->label->setText(QString::fromStdString(a));
 }
 
-void MainWindow::on_pushButton_4_clicked()
+void MainWindow::on_pushButton_4_clicked()//4
 {
-    ui->label->setText(ui->label->text() + (ui->pushButton_4->text()));
-    gui.clickNumber(ui->pushButton_4->text().toStdString());
+    QString displayValue = ui->label->text();
+    string a = gui.clickNumber("4",displayValue.toStdString());
+    ui->label->setText(QString::fromStdString(a));
 }
 
-void MainWindow::on_pushButton_5_clicked()
+void MainWindow::on_pushButton_5_clicked()//5
 {
-    ui->label->setText(ui->label->text() + (ui->pushButton_5->text()));
-    gui.clickNumber(ui->pushButton_5->text().toStdString());
+    QString displayValue = ui->label->text();
+    string a = gui.clickNumber("5",displayValue.toStdString());
+    ui->label->setText(QString::fromStdString(a));
 }
 
-void MainWindow::on_pushButton_6_clicked()
+void MainWindow::on_pushButton_6_clicked()//6
 {
-    ui->label->setText(ui->label->text() + (ui->pushButton_6->text()));
-    gui.clickNumber(ui->pushButton_6->text().toStdString());
+    QString displayValue = ui->label->text();
+    string a = gui.clickNumber("6",displayValue.toStdString());
+    ui->label->setText(QString::fromStdString(a));
 }
 
-void MainWindow::on_pushButton_7_clicked()
+void MainWindow::on_pushButton_7_clicked()//7
 {
-    ui->label->setText(ui->label->text() + (ui->pushButton_7->text()));
-    gui.clickNumber(ui->pushButton_7->text().toStdString());
+    QString displayValue = ui->label->text();
+    string a = gui.clickNumber("7",displayValue.toStdString());
+    ui->label->setText(QString::fromStdString(a));
 }
 
-void MainWindow::on_pushButton_8_clicked()
+void MainWindow::on_pushButton_8_clicked()//8
 {
-    ui->label->setText(ui->label->text() + (ui->pushButton_8->text()));
-    gui.clickNumber(ui->pushButton_8->text().toStdString());
+    QString displayValue = ui->label->text();
+    string a = gui.clickNumber("8",displayValue.toStdString());
+    ui->label->setText(QString::fromStdString(a));
 }
 
-void MainWindow::on_pushButton_9_clicked()
+void MainWindow::on_pushButton_9_clicked()//9
 {
-    ui->label->setText(ui->label->text() + (ui->pushButton_9->text()));
-    gui.clickNumber(ui->pushButton_9->text().toStdString());
+    QString displayValue = ui->label->text();
+    string a = gui.clickNumber("9",displayValue.toStdString());
+    ui->label->setText(QString::fromStdString(a));
 }
 
-void MainWindow::on_pushButton_0_clicked()
+void MainWindow::on_pushButton_0_clicked()//0
 {
-    ui->label->setText(ui->label->text() + (ui->pushButton_0->text()));
-    gui.clickNumber(ui->pushButton_0->text().toStdString());
+    QString displayValue = ui->label->text();
+    string a = gui.clickNumber("0",displayValue.toStdString());
+    ui->label->setText(QString::fromStdString(a));
 }
 
 void MainWindow::on_pushButton_20_clicked() // "C"
 {
-    ui->label->setText(ui->label->text().remove(ui->label->text().size()-1,1));
-    gui.clickClear();
+    ui->label->setText(QString::fromStdString(gui.clickClear()));
+    
 }
 
 void MainWindow::on_pushButton_10_clicked() // "DEL"
 {
-    ui->label->setText("0");
-    gui.clickClear();
+    ui->label->setText(QString::fromStdString(gui.clickBack(ui->label->text().toStdString())));
 }
 
 void MainWindow::on_pushButton_13_clicked() // "!"
 {
-    QString vysledek = QString::number(gui.clickOperand(ui->pushButton_13->text().toStdString()));
-    ui->label->setText(vysledek);
+    QString displayValue = ui->label->text();
+    if(displayValue != "Overflow"){
+        double foo = 0;
+        try{
+            foo = gui.clickOperand("!",displayValue.toStdString());
+            ui->label->setText(QString::number(foo));
+        }catch(string e){
+            ui->label->setText(QString::fromStdString(e));
+        }
+    }
+    
 }
 
 
 void MainWindow::on_pushButton_14_clicked() // "sqrt"
 {
-    QString vysledek = QString::number(gui.clickOperand("sqrt"));
-    ui->label->setText(vysledek + "*" + ui->pushButton_14->text());
+    QString displayValue = ui->label->text();
+    if(displayValue != "Overflow"){
+        double foo = 0;
+        try{
+            foo = gui.clickOperand("sqrt",displayValue.toStdString());
+            ui->label->setText(QString::number(foo));
+        }catch(string e){
+            ui->label->setText(QString::fromStdString(e));
+        }
+    }
 }
 
 
 void MainWindow::on_pushButton_15_clicked() // "**"
 {
-    QString vysledek = QString::number(gui.clickOperand(ui->pushButton_15->text().toStdString()));
-    ui->label->setText(vysledek + ui->pushButton_15->text());
+    QString displayValue = ui->label->text();
+    if(displayValue != "Overflow"){
+        double foo = 0;
+        try{
+            foo = gui.clickOperand("**",displayValue.toStdString());
+            ui->label->setText(QString::number(foo));
+        }catch(string e){
+            ui->label->setText(QString::fromStdString(e));
+        }
+    }
 }
 
 void MainWindow::on_pushButton_19_clicked() // "+"
 {
-    QString vysledek = QString::number(gui.clickOperand(ui->pushButton_19->text().toStdString()));
-    ui->label->setText(vysledek + ui->pushButton_19->text());
+    QString displayValue = ui->label->text();
+    if(displayValue != "Overflow"){
+        double foo = 0;
+        try{
+            foo = gui.clickOperand("+",displayValue.toStdString());
+            ui->label->setText(QString::number(foo));
+        }catch(string e){
+            ui->label->setText(QString::fromStdString(e));
+        }
+    }
 }
 
 void MainWindow::on_pushButton_18_clicked() // "-"
 {
-    QString vysledek = QString::number(gui.clickOperand(ui->pushButton_18->text().toStdString()));
-    ui->label->setText(vysledek + ui->pushButton_18->text());
+    QString displayValue = ui->label->text();
+    if(displayValue != "Overflow"){
+        double foo = 0;
+        try{
+            foo = gui.clickOperand("-",displayValue.toStdString());
+            ui->label->setText(QString::number(foo));
+        }catch(string e){
+            ui->label->setText(QString::fromStdString(e));
+        }
+    }
 }
 
 void MainWindow::on_pushButton_12_clicked() // "="
 {
-    QString vysledek = QString::number(gui.clickEqual()); //vypočíta
-    ui->label->setText(vysledek);
+    QString displayValue = ui->label->text();
+    if(displayValue != "Overflow"){
+        double foo = 0;
+        try{
+            foo = gui.clickOperand("=",displayValue.toStdString());
+            ui->label->setText(QString::number(foo));
+        }catch(string e){
+            ui->label->setText(QString::fromStdString(e));
+        }
+    }
 }
 
 void MainWindow::on_pushButton_17_clicked() // "*"
 {
-    QString vysledek = QString::number(gui.clickOperand(ui->pushButton_17->text().toStdString()));
-    ui->label->setText(vysledek + ui->pushButton_17->text());
+    QString displayValue = ui->label->text();
+    if(displayValue != "Overflow"){
+        double foo = 0;
+        try{
+            foo = gui.clickOperand("*",displayValue.toStdString());
+            ui->label->setText(QString::number(foo));
+        }catch(string e){
+            ui->label->setText(QString::fromStdString(e));
+        }
+    }
 }
 
 void MainWindow::on_pushButton_16_clicked() // "/"
 {
-    QString vysledek = QString::number(gui.clickOperand(ui->pushButton_16->text().toStdString()));
-    ui->label->setText(vysledek + ui->pushButton_16->text());
+    QString displayValue = ui->label->text();
+    if(displayValue != "Overflow"){
+        double foo = 0;
+        try{
+            foo = gui.clickOperand("/",displayValue.toStdString());
+            ui->label->setText(QString::number(foo));
+        }catch(string e){
+            ui->label->setText(QString::fromStdString(e));
+        }
+    }
 }
 /*** Konec souboru mainwindow.cpp ***/

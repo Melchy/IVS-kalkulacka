@@ -10,12 +10,11 @@
 	class GUI
 	{
     private:
-        string display = "0";
+    	Operations oper;
 	public:
-        double clickOperand(string);
-        void clickNumber(string);
-		void clickClear();
-		void clickBack();
-        double clickEqual();
+        double clickOperand(string,string);
+        string clickNumber(string,string);
+		string clickClear();
+		string clickBack(string);
 	};
 #endif

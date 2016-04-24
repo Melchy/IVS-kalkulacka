@@ -31,32 +31,36 @@ string  Operations::getOperation()
 
 
 double Operations::calculate() {
+	double result = 0;
     if(operation == "*"){
-        return Mathf::multipli(operand1,operand2);
+        result = Mathf::multipli(operand1,operand2);
 	}
     else if(operation == "/"){
-        return Mathf::divide(operand1,operand2);
+        result = Mathf::divide(operand1,operand2);
 	}
     else if(operation == "!"){
-        return Mathf::factorial(operand1);
+        result = Mathf::factorial(operand1);
 	}
-    else if(operation  == "^"){
-        return Mathf::power(operand1,operand2);
+    else if(operation  == "**"){
+        result = Mathf::power(operand1,operand2);
 	}
     else if (operation  == "+"){
-        return Mathf::add(operand1,operand2);
+        result = Mathf::add(operand1,operand2);
 	}
     else if (operation == "-"){
-        return Mathf::subtract(operand1,operand2);
+        result = Mathf::subtract(operand1,operand2);
 	}
     else if (operation == "sqrt"){
-        return operand1 * Mathf::sqrt(operand2);
+        result = Mathf::sqrt(operand1);
+    } else if(operation == "=" || operation == ""){ 
+    	result = operand1;
     }
 	else
 	{
 		throw "syntax error";
 		return 0;
 	}
+	return result;
 }
 
 void Operations::clear() {
@@ -67,11 +71,9 @@ void Operations::clear() {
 }
 
 bool Operations::inOneOperandOperation(string Operation){
-    if(Operation == "!")
+    if(Operation == "!" || Operation == "sqrt" || Operation == "=")
 		return true;
-    else if(Operation == "sqrt")
-		return true;
-	else 
+    else
 		return false;
 }
 

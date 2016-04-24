@@ -1,66 +1,59 @@
 #include "GUI.h"
+#include <QtDebug>
 
-Operations oper;
-
-double GUI::clickOperand(string Operation)
+double GUI::clickOperand(string operation,string display)
 {
-    double vysledek;
-    if(Operation == "!")
-    {
-        oper.setOperand1(std::stod(display));
-        oper.setOperation(Operation);
-        vysledek = clickEqual();
-        display = to_string(vysledek);
-    }
-    else if(Operation == "sqrt")
-    {
-        if(display == "0")
-            display = "1";
-        oper.setOperand1(std::stod(display));
-        oper.setOperation(Operation);
-        vysledek = std::stod(display);
-        display = "";
-    }
-    else
-    {
-     vysledek = clickEqual();         //volá funkciu clickEqual()
-     oper.setOperation(Operation);    //nastaví operáciu
-     display = "";                    //vynuluje display
-    }
-    return vysledek;                  //vráti výsledok clickEqual()(buď operand1, alebo výsledok)
+
+	if(oper.getOperation() != ""){
+		oper.setOperand2(stod(display));
+		display = to_string(oper.calculate());
+		oper.clear();
+	}
+	if(oper.inOneOperandOperation(operation)){//jednooperandove jsou !,sqrt,=
+		oper.setOperand1(stod(display));
+		oper.setOperation(operation);
+		double foo = oper.calculate();
+		qDebug() << QString::number(foo);
+		oper.clear();
+		return foo;
+	}else{
+		oper.setOperand1(stod(display));
+		oper.setOperation(operation);
+		oper.setOperand2(0);
+		return 0;
+	}
 }
 
-void GUI::clickNumber(string number)
+string GUI::clickNumber(string number, string display)
 {
-        display = display + number; //display je pomocný string na ukladanie čísel
+	if(display == "Overflow"){
+		oper.clear();
+		return number;
+	}
+	if(display.length() >= 9){
+		return display;
+	}
+	if(display == "0"){
+		return number;
+	}
+	return (display+number);
 }
 
-void GUI::clickClear()
+string GUI::clickClear()
 {
-	oper.clear();	
+	oper.clear();
+	return "0";	
 }
 
-void GUI::clickBack()
+string GUI::clickBack(string displayValue)
 {
-    //TODO
-    display.pop_back();
-}
-
-double GUI::clickEqual()
-{
-    double vysledek;
-    if(oper.getOperation() == "")               //nie je nastavená operácia
-    {                                           //hodnotu displaya nastaví do operandu1
-        vysledek = std::stod(display);          //to isté vráti
-        oper.setOperand1(std::stod(display));
-    }
-    else                                        //operácia je nastavená
-    {
-        oper.setOperand2(std::stod(display));   //nastaví operand2
-        vysledek = oper.calculate();            //vypočíta
-        clickClear();                           //vymaže operandy a operátor
-        oper.setOperand1(vysledek);             //operand1 nastaví na výsledok
-        display = to_string(vysledek);          //do display nastaví výsledok(operand1)
-    }
-    return vysledek;
+    if(displayValue == "Overflow"){
+		oper.clear();
+		return "0";
+	}
+	if(displayValue.length() == 1){
+		return "0";
+	}
+    displayValue.pop_back();
+    return displayValue;
 }
