@@ -1,3 +1,10 @@
+/*******************************************************************
+ * Název projektu: Kalkulačka
+ * Soubor: Operations.cpp
+ * Datum: 24.4.2016
+ * Autor: skupina 3++
+ * Popis: Třída která komunikuje s matematickou knihovnou
+ *******************************************************************/
 /**
 * @file Operations.cpp
 * @author skupina 3++
