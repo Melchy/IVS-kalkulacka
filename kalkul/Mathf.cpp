@@ -3,7 +3,7 @@
  * Soubor: Mathf.cpp
  * Datum: 24.4.2016
  * Autor: skupina 3++
- * Popis: Třída která komunikuje s uživatelkým rozhraním a reaguje na stisknutí tlačítek
+ * Popis: Matematická knihovna
  *******************************************************************/
 /**
 * @file Mathf.cpp
