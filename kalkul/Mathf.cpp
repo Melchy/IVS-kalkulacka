@@ -11,6 +11,7 @@
 * @brief  Implementace Mathf.h.
 */
 #include "Mathf.h"
+
 /**
  *  Sčítání
  * @param op1 první operand
@@ -91,7 +92,7 @@ double Mathf::power(double op1, double op2){
 		power *= op1; 
 	if(power > 999999999)//pokud výsledek přeteče obrazovku 
 		throw std::string("Overflow");//vrátí chybovou hlášku
-	else return power;//vráí mocninu
+	else return power;//vrátí mocninu
 }
 
 /**
