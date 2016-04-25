@@ -13,16 +13,6 @@
 #include "Mathf.h"
 #include "Operations.h"
 
-/*
-Operations::Operations()
-{
-	operand1 = 0;
-	operand2 = 0;
-	operation = "";
-	oneOperandOperations = {"!", "sqrt"};
-}
-*/
-
 /**
  * Nastaví první operand
  * @param Op1 double první operand

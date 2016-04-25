@@ -45,7 +45,7 @@ double GUI::clickOperand(string operation,string display)
  * Řeší situaci kdy uživatel klikl na tlačítko s číslem
  * @param number číslo bylo zadáno uživatelem zmáčknutím tlačítka - string 
  * @param display obsah obrazovky - string
- * @return string přidá na obrazovku znak čísla nebo nechá na obrazovce původni hodnotu pokud dosáhla limit 
+ * @return string přidá na obrazovku znak čísla nebo nechá na obrazovce původni hodnotu pokud dosáhla limit
  */
 string GUI::clickNumber(string number, string display)
 {
