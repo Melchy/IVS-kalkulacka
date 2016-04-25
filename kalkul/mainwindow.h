@@ -1,3 +1,10 @@
+/*******************************************************************
+ * Název projektu: Kalkulačka
+ * Soubor: mainwindow.h
+ * Datum: 24.4.2016
+ * Autor: skupina 3++
+ * Popis: Třída která komunikuje s uživatelským rozhraním a ostatními třídami
+ *******************************************************************/
 /**
 * @file mainwindow.h
 * @author skupina 3++
