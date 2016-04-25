@@ -1,0 +1,17 @@
+﻿Rozdíl mezi plánem a skutečností
+
+Časový harmonogram, který jsme si předběžně stanovili, se nám bohužel 
+nedařilo plnit tak, jak jsme si představovali. Plán jsme postupně plnili 
+s drobným spožděním. První byly navrženy testy a poté vytvořeny návrhy 
+pro implementaci. Pak se navrhl předběžný vzhled kalkulačky a matematická 
+knihovna. Následně jsme propojovali uživatelké rozhraní s matematickou 
+knihovnou. Tato část se nám trochu nedařila a prodloužila oproti předpokladu, 
+ale nakonec jsme to vyřešili. Doplnili jsme dokumentaci, vytvořili 
+instalátor, mockupy a ostatní součási projektu.
+
+Rozdělení podúkolů jsme plnili, jak jsme si stanovili v plánu, ale se 
+vzájemnou pomocí s určitými problémovými částmi.
+
+S komunikací ve skupině nebyl problém, používali jsme osobní komunikaci 
+a Facebook, kde jsme si vytvořili zvláštní skupinovou konverzaci. 
+Systém GIT pro správu verzí jsme použili, jak bylo plánováno.
