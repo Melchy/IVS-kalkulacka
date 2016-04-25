@@ -1,0 +1,4 @@
+xchrip00	5	(matematická knižnica, rozhranie, prepájanie modulov, debugging)
+xmysza00	5	(dokumentácia, inštalátor, uživ. príručka, prepájanie modulov)
+xmotyc06	5	(návrh, testy, prepájanie modulov)
+xmacur07	5	(grafické rozhranie, prepájanie modulov)
