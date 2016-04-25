@@ -1,3 +1,10 @@
+/*******************************************************************
+ * Název projektu: Kalkulačka
+ * Soubor: Operations.h
+ * Datum: 24.4.2016
+ * Autor: skupina 3++
+ * Popis: Třída která komunikuje s matematickou knihovnou
+ *******************************************************************/
 /**
 * @file Operations.h
 * @author skupina 3++
@@ -19,7 +26,7 @@
         string getOperation();
         double calculate();
         void clear();
-        bool inOneOperandOperation(string); //zbytočná funkcia
+        bool inOneOperandOperation(string);
 	private:
 		double operand1 = 0;
 		double operand2 = 0;
