@@ -6,7 +6,7 @@
  * Popis: Třída která komunikuje s uživatelkým rozhraním a reaguje na stisknutí tlačítek
  *******************************************************************/
  /**
- * @file GUI.ch
+ * @file GUI.h
  * @brief Třída GUI a její metody
  * @author skupina 3++
  */
