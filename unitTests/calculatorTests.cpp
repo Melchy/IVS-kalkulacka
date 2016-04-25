@@ -1,9 +1,6 @@
 // calculatorTests.cpp : Defines the entry point for the console application.
 //
 
-#include "Qlabel.h"
-#include "Display.h"
-#include "Operations.h"
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 #include "Mathf.h"
@@ -39,7 +36,7 @@ TEST_CASE("Mathf") {
 		REQUIRE(Mathf::factorial(3)==6);
 		REQUIRE(Mathf::factorial(0)==1);
 		bool err=false;
-		REQUIRE_THROWS(	Mathf::factorial(-2));
+		REQUIRE_THROWS(Mathf::factorial(-2));
 		
 	}
 	SECTION("checkPower"){
